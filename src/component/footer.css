@@ -1,0 +1,31 @@
+#footer {
+  width: 100%;
+  padding-block: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  background-color: black;
+  /* margin-top: auto; */
+  position: fixed;
+  bottom: 0;
+}
+#footer .itemf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10em;
+}
+#footer .phone {
+  display: flex;
+  gap: 1em;
+}
+#footer .icon {
+  display: flex;
+  gap: 6em;
+}
+#footer p {
+  font: normal normal normal 25px/30px ABeeZee;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
