@@ -1,0 +1,26 @@
+#contact .cont{
+    padding-block: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+#contact .cont p{
+    font-size: 2em;
+}
+#contact .icon {
+    display: flex;
+    gap: 6em;
+    filter: invert(100%);
+  }
+  #contact .icon p {
+    font: normal normal normal 25px/30px ABeeZee;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
+  #contact .icon .phone {
+    display: flex;
+    gap: 1em;
+  }

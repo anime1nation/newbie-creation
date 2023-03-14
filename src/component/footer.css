@@ -1,9 +1,9 @@
 #footer {
   width: 100%;
-  padding-block: 1em;
+  /* padding-block: 1em; */
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
   background-color: black;
   /* margin-top: auto; */
   position: fixed;
