@@ -5,7 +5,7 @@ import Header from './component/Header';
 
 function App() {
   return (
-    <div className='APP'>
+    <div className='App'>
       <Header/>
       <Routes/>
       <Footer/>

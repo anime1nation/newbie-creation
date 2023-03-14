@@ -1,12 +1,12 @@
 #footer {
   width: 100%;
-  /* padding-block: 1em; */
+  padding-block: 1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   background-color: black;
-  /* margin-top: auto; */
-  position: fixed;
+  margin-top: auto;
+  /* position: sticky; */
   bottom: 0;
 }
 #footer .itemf {
@@ -28,4 +28,21 @@
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
+}
+@media (max-aspect-ratio: 1/1), (max-width: 900px) {
+  #footer .itemf{
+    flex-direction: column;
+    padding-block:1em;
+    padding-inline: 0.3em;
+    gap: 0em;
+  }
+  #footer .icon {
+    gap: 1em;
+  }
+  #footer p {
+    font: normal normal normal 20px ABeeZee;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
 }

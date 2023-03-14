@@ -1,3 +1,11 @@
+#contact{
+  background-color: white;
+  margin-block: 5em;
+  margin-inline: auto;
+  width:80%;
+  padding-inline: 4em;
+  padding-block: 1em;
+}
 #contact .cont{
     padding-block: 2em;
     display: flex;

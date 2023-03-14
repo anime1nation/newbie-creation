@@ -1,0 +1,39 @@
+#Feedback {
+    z-index: 1000000;
+    width: 12rem;
+    height: 5em;
+    position: fixed;
+    top: 6em;
+    right: 2em;
+    padding: 1em;
+    border-radius: 0.2em;
+    background-color:#e0f0ef;
+    border: 1px solid #61aaae;
+    display: none;
+  }
+  
+  #Feedback > p {
+    font-size: 1em;
+    font-weight: 600;
+  }
+  #Feedback.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 0.5s linear slidein;
+  }
+  #Feedback.active.error {
+    background-color: rgb(255, 228, 228);
+  }
+  #Feedback.active.error > p {
+    color: red;
+  }
+  @keyframes slidein {
+    0% {
+      transform: translateX(50rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  

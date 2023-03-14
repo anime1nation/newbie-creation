@@ -23,3 +23,9 @@
     opacity: 1;
     cursor: pointer;
   }
+  @media (max-aspect-ratio: 1/1), (max-width: 900px) {
+    #main-header .header {
+      gap:1em;
+      align-items: self;
+    }
+  }
