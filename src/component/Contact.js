@@ -17,12 +17,11 @@ import {
   addFeedbackMessage,
   removeFeedbackMessage,
 } from "../app-manager/slices/feedbackSlice";
-import { useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Contact() {
-    const location = useLocation();
-    const path =location.pathname.split("/").join("");
-
+  const location = useLocation();
+  const path = location.pathname.split("/").join("");
 
   const [sending, setSending] = useState(false);
   const [feedback, setFeedback] = useState();
@@ -30,13 +29,13 @@ export default function Contact() {
   const { name, phoneNumber, message } = useSelector((state) => state.contact);
 
   const dispatch = useDispatch();
-  const apiURL = "";
+  const apiURL = "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/contact";
   const contactDetail = new FormData();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     contactDetail.append("name ", name);
-    contactDetail.append("phoneNumber ", phoneNumber); 
+    contactDetail.append("phoneNumber ", phoneNumber);
     contactDetail.append("message ", message);
     setSending(true);
     axios
@@ -67,21 +66,21 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact">
+    <div id="contact" >
       <div className="cont">
         <div>
           <p>Contact Us Via</p>
         </div>
         <div className="icon">
-          <div>
-            <img className="insta" src={insta} alt="insta" />
+          <div className="insta">
+            <img  src={insta} alt="insta" />
           </div>
-          <div>
-            <img className="whatsapp" src={whatsapp} alt="whatsapp" />
+          <div className="whatsapp">
+            <img  src={whatsapp} alt="whatsapp" />
           </div>
           <div className="phone">
-            <div>
-              <img className="call" src={call} alt="call" />
+            <div className="call">
+              <img  src={call} alt="call" />
             </div>
             <div>
               <p>+91-7061330904</p>
@@ -93,54 +92,64 @@ export default function Contact() {
         </div>
         <div>
           <form className="contactForm" onSubmit={handleSubmit}>
-            <div>
-              <input
-                required
-                value={name}
-                type="text"
-                placeholder="Your Name Here"
-                onChange={(e) => dispatch(updatedName(e.target.value))}
-              ></input>
-            </div>
-            <div>
-              <input
-                required
-                value={phoneNumber}
-                type="number"
-                placeholder="Your Contact Here"
-                onChange={(e) => dispatch(updatedPhoneNumber(e.target.value))}
-              ></input>
-            </div>
-            <div>
-              <textarea
-                value={message}
-                name="message"
-                id="message"
-                required
-                cols="30"
-                rows="2"
-                placeholder="feedback"
-                onChange={(e) => dispatch(updatedMessage(e.target.value))}
-              ></textarea>
-            </div>
-            <div className="submitButton">
-              <button type="submit" disabled={sending}>
-                {sending ? (
-                  <>
-                    <Loader />
-                    {"submiting"}
-                  </>
-                ) : (
-                  "Request a call"
-                )}
-              </button>
-            </div>
+            <input
+              required
+              autoComplete="off"
+              value={name}
+              type="text"
+              className="question"
+              id="nme"
+              onChange={(e) => dispatch(updatedName(e.target.value))}
+            />
+            <label htmlFor="nme">
+              <span>What's your name?</span>
+            </label>
+
+            <input
+              required
+              autoComplete="off"
+              value={phoneNumber}
+              type="number"
+              className="question"
+              id="phn"
+              onChange={(e) => dispatch(updatedPhoneNumber(e.target.value))}
+            />
+            <label htmlFor="phn">
+              <span>What's your phone number?</span>
+            </label>
+
+            <textarea
+              value={message}
+              name="message"
+              autoComplete="off"
+              required
+              rows="2"
+              className="question"
+              id="msg"
+              onChange={(e) => dispatch(updatedMessage(e.target.value))}
+            ></textarea>
+            <label htmlFor="msg">
+              <span>What's your message?</span>
+            </label>
+
+            <button
+              type="submit"
+              className="button"
+              disabled={sending}
+           >{
+            sending ? (
+              <>
+                <Loader />
+                {"submiting"}
+              </>
+            ) : (
+              "Request a call"
+            )
+          }</button>
           </form>
         </div>
-        <div>
-          <p>
-            <i>* Usually we will contact you within 24 hour</i>
-          </p>
+        <div className="tc">
+            <i>* Usually we contact you within 24 hours</i>
         </div>
       </div>
     </div>
