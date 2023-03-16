@@ -1,13 +1,13 @@
 import './App.css';
+import Routes from './Router';
 import Footer from './component/Footer';
 import Header from './component/Header';
-import Landing from './component/Landing';
 
 function App() {
   return (
-    <div className='APP'>
+    <div className='App'>
       <Header/>
-      <Landing/>
+      <Routes/>
       <Footer/>
     </div>
   );

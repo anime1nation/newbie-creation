@@ -1,0 +1,51 @@
+#Feedback_main {
+    margin: auto;
+    margin-block: 2em;
+    padding-block: 1em;
+    padding-inline: 4em;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background-color: #e0f0ef;
+    box-sizing: border-box;
+  }
+  
+  #Feedback_main .feedback-content {
+    width: 60%;
+    line-height: 2em;
+    font-weight: 500;
+    padding: 1em;
+    text-align: center;
+    align-self: center;
+  }
+  
+  #Feedback_main .line {
+    border-bottom: 0.2em solid #49502b;
+    width: 20%;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    #Feedback_main {
+      width: 90%;
+      padding-inline: 0em;
+    }
+    #Feedback_main .feedback-content {
+      width: 75%;
+      padding: 1em 0;
+    }
+  }
+  
+
+
+#Feedback_main .button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding: 1em 0.75em;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+  }

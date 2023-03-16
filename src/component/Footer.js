@@ -21,7 +21,7 @@ const Footer = () => {
             <img className="call" src={call} alt="call" />
           </div>
           <div>
-            <p>+91 7061330904</p>
+            <p>+91-7061330904</p>
           </div>
         </div>
         </div>
