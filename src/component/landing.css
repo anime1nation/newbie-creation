@@ -1,3 +1,41 @@
-#land{
-    background-color: #FFFBE9;
+#banner{
+    display:flex;
+    gap: 3em;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin: auto;
+}
+#banner .lab{
+text-align: center;
+}
+#banner .label1{
+    text-align: center;
+    justify-content: center;
+    font:  normal normal bold 50px/60px Book Antiqua;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+#banner .label1 span{
+    text-align: center;
+    font: normal normal normal 50px/70px Gigi;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+#banner .bannerimage{
+    background: #FFFFFF padding-box;
+    border: 2px solid #707070;
+    opacity: 1; 
+    width:1088px;
+}
+#banner .cardimage{
+    width:435px;
+}
+#banner .banner-card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-inline: 2em;
 }

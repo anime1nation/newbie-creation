@@ -7,8 +7,7 @@ export default function FeedbackPage(){
       <div id="Feedback_main">
         <p className='feedback-content'>
             Thank you for contacting  us we will respond you soon in within 24 hours.
-            Rgards
-            ________________
+            <p>Rgards</p>
             Newbie Creations
         </p>
         <Link to={"/"}>
