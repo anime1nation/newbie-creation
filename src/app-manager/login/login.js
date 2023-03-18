@@ -4,13 +4,12 @@ import axios from "axios";
 const login = async (userName,passKey) => {
     const data = await axios({
         method:"GET",
-        url:"",
-        auth:{
-            username:userName,
-            password:passKey,
-        },
+        url:"https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/auth/login",
+        auth: {
+            userName: userName,
+            pwd: passKey,
+          },
     });
-    console.log(data)
     return data;
 }
 

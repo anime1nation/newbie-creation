@@ -4,13 +4,13 @@ import axios from "axios";
 const logout = async (token, sessionId, username) => {
   const data = axios({
     method: "GET",
-    url: "https://hm5m25z57j.execute-api.us-east-2.amazonaws.com/production/auth/logout",
+    url: "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/auth/logout",
     headers: {
       Authorization: "Bearer " + token,
     },
     params: {
       suid: sessionId,
-      cid: username,
+      userName: username,
     },
   });
   return data;
