@@ -6,7 +6,7 @@ export default function Feedback({content,status}){
     useEffect(()=>{
         const tick = setTimeout(()=>{
             setActive(false);
-        },5000);
+        },);
         return()=>{
             clearTimeout(tick);
         };

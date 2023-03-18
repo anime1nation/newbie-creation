@@ -1,0 +1,106 @@
+#login_page {
+    /* height: 100vh; */
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: rgb(251, 251, 250);
+    margin: auto;
+  }
+  
+  #login_page .login-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    width: 100%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fdf9f5;
+  }
+  
+  #login_page .login-card {
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+  
+  #login_page .login-card label {
+    width: 100%;
+    font-size: 1.25em;
+    gap: 0.25em;
+    font-weight: 600;
+    color: #d6b198;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #login_page .login-card input {
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    gap: 2em;
+    padding: 0.75em;
+    border: 0.15em solid #d6b198;
+  }
+  
+  #login_page .login-card input::placeholder {
+    color: var(--primary-color);
+  }
+  #login_page .forceLogin {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(0.2em);
+  }
+  #login_page .forceLogin .force_login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    gap: 1.5em;
+    background-color: #fdf9f5;
+    border-radius: 1em;
+  }
+  
+  #login_page .login-card .login_button {
+    background-color: black;
+    border-radius: 0.5em;
+    padding-inline: 1.25em;
+    padding-block: 0.75em;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    border: none;
+    white-space: nowrap;
+    max-width: max-content;
+  }
+  #login_page .login-card .login_button:hover {
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 900px) {
+    #login_page {
+        width:auto;
+      height: 80vh;
+    }
+    #login_page .login-container {
+      width: auto;
+    }
+    #login_page .login-card label {
+      width: 100%;
+    }
+    #login_page .login-card {
+      width: 100%;
+    }
+  }
+  

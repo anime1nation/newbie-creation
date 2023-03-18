@@ -45,7 +45,7 @@
     max-width: 1125px;
    
   }
-  #contact input,#contact span,#contact label,#contact textarea {
+  #contact input,#contact span,#contact label,#contact textarea ,#contact .question1{
   font-family: 'Ubuntu', sans-serif;
   display: block;
   margin: 10px;
@@ -59,7 +59,7 @@
 }
 /* Question */
 
-#contact input.question,#contact textarea.question {
+#contact input.question,#contact textarea.question ,#contact .question1{
   font-size: 20px;
   font-weight: 300;
   border-radius: 2px;
@@ -72,7 +72,7 @@
 }
 /* Underline and Placeholder */
 
-#contact input.question + label,#contact textarea.question + label {
+#contact input.question + label,#contact textarea.question + label,#contact .question1 + label {
   display: block;
   position: relative;
   white-space: nowrap;
@@ -85,11 +85,11 @@
   height: 0px;
 }
 
-#contact input.question:focus + label,#contact textarea.question:focus + label {
+#contact input.question:focus + label,#contact textarea.question:focus + label,#contact .question1:focus + label {
   width: 80%;
 }
 
-#contact input.question:focus,#contact input.question:valid {
+#contact input.question:focus,#contact input.question:valid ,#contact .question1:valid,#contact .question1:focus {
   padding-top: 35px;
 }
 
@@ -102,6 +102,11 @@
   font-size: 18px;
   color: #333;
 }
+#contact .question1:focus + label > span,#contact .question1:valid + label > span {
+  top: -60px;
+  font-size: 18px;
+  color: #333;
+}
 
 #contact textarea.question:focus + label > span,#contact textarea.question:valid + label > span {
   top: -80px;
@@ -109,15 +114,15 @@
   color: #000000;
 }
 
-#contact input.question:valid + label,#contact textarea.question:valid + label {
+#contact input.question:valid + label,#contact textarea.question:valid + label,#contact .question1:valid + label {
   border-color: green;
 }
 
-#contact input.question:invalid,#contact textarea.question:invalid {
+#contact input.question:invalid,#contact textarea.question:invalid,#contact .question1:invalid {
   box-shadow: none;
 }
 
-#contact input.question + label > span,#contact textarea.question + label > span {
+#contact input.question + label > span,#contact textarea.question + label > span ,#contact .question1 + label > span {
   font-weight: 300;
   margin: 0;
   position: absolute;
@@ -148,12 +153,12 @@
   background: #999;
 } */
 
-#contact input.question:valid ~ .button,#contact textarea.question:valid ~ .button {
+#contact input.question:valid ~ .button,#contact textarea.question:valid ~ .button,#contact .question1:valid ~ .button {
   -webkit-animation: appear 1s forwards;
   animation: appear 1s forwards;
 }
 
-#contact input.question:invalid ~ .button,#contact textarea.question:invalid ~ .button {
+#contact input.question:invalid ~ .button,#contact textarea.question:invalid ~ .button,#contact .question1:invalid ~ .button  {
   display: none;
 }
 
