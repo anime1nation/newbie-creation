@@ -162,8 +162,8 @@
   display: none;
 }
 
-.tc{
-  font-size: 15px;
+#contact .tc{
+  font-size: 20px;
 }
 
 @-webkit-keyframes appear {

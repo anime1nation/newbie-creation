@@ -70,3 +70,78 @@ text-align: center;
         width:200px;
     }
 }
+
+
+.album {
+    margin-top: 80px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .col-md-4 {
+    padding: 1rem;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .card-img-top {
+    height: 225px;
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .card-body {
+    flex: 1;
+  }
+  
+  .card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .card-text {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+  
+  .btn:active {
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
+  
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }

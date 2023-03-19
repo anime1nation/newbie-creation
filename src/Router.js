@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Login from './admin/Login'
+import AddImage from './component/AddImage'
 import Contact from './component/Contact'
 import Landing from './component/Landing'
 
@@ -11,6 +12,7 @@ export default function Routers() {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/join" element={<Contact/>}/>
         <Route path="/admin" element={<Login/>}/>
+        <Route path="/addimage" element={<AddImage/>}/>
     </Routes>
   )
-}
+} 

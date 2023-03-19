@@ -1,0 +1,216 @@
+#upload{
+    background-color: white;
+    margin-block: 5em;
+    margin-inline: auto;
+    width:50%;
+    padding-inline: 4em;
+    padding-block: 1em;
+    border-radius: 8em;
+  }
+  #upload .cont{
+      padding-block: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 2em;
+  }
+  #upload .contactForm{
+      padding-block: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      /* align-items: center; */
+      gap: 2em;
+  }
+    #upload html {
+      font-family: 'Lora', sans-serif;
+      width: 100%;
+    }
+    
+    #upload body {
+      margin: 5% auto 0 auto;
+      width: 90%;
+      max-width: 1125px;
+     
+    }
+    #upload input,#upload span,#upload label,#upload textarea{
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+  }
+  
+  #upload textarea:focus,#upload input:focus {
+    outline: 0;
+  }
+  /* Question */
+  
+  #upload input.question{
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    width: 80%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+  }
+  /* Underline and Placeholder */
+  
+  #upload input.question + label{
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5em;
+    margin: 0;
+    width: 10%;
+    border-top: 1px solid red;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+  }
+  
+  #upload input.question:focus + label{
+    width: 80%;
+  }
+  
+  #upload input.question:focus,#upload input.question:valid{
+    padding-top: 35px;
+  }
+  
+  #upload .question:focus + label > .img, #upload .question:valid + label > .img {
+    top: -120px;
+    font-size: 18px;
+    color: #333;
+  }
+  #upload input.question:focus + label > .dis,#upload input.question:valid + label > .dis {
+    top: -90px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  #upload input.question:valid + label,#upload textarea.question:valid + label,#upload .question1:valid + label {
+    border-color: green;
+  }
+  
+  #upload input.question:invalid,#upload textarea.question:invalid,#upload .question1:invalid {
+    box-shadow: none;
+  }
+  #upload input.question + label >.img{
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8F8F8F;
+    font-size: 20px;
+    top: -100px;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+  #upload input.question + label > .dis{
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8F8F8F;
+    font-size: 20px;
+    top: -60px;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+  
+  #upload input[type="submit"] {
+    -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    display: block;
+    opacity: 0;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* #upload input[type="submit"]:hover {
+    background: #EEE;
+  }
+  
+  #upload input[type="submit"]:active {
+    background: #999;
+  } */
+  
+  #upload input.question:valid ~ .button,#upload textarea.question:valid ~ .button,#upload .question1:valid ~ .button {
+    -webkit-animation: appear 1s forwards;
+    animation: appear 1s forwards;
+  }
+  
+  #upload input.question:invalid ~ .button,#upload textarea.question:invalid ~ .button,#upload .question1:invalid ~ .button  {
+    display: none;
+  }
+  
+  #upload .tc{
+    font-size: 24px;
+  }
+  
+  @-webkit-keyframes appear {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes appear {
+    100% {
+      opacity: 1;
+    }
+  }
+  #upload .button{
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+  }
+  
+  #upload .button:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  
+  @media (max-aspect-ratio: 1/1), (max-width: 900px) {
+    #upload{
+      width:90%;
+      padding-inline: 3em;
+    }
+    .insta{
+      grid-area: insta;
+    }
+    .whatsapp{
+      grid-area: whatsapp;
+    }
+    .phone{
+      grid-area: phine;
+    }
+    #upload .icon {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      filter: invert(100%);
+      gap:1em;
+    }
+  } 

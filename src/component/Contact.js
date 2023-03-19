@@ -150,7 +150,7 @@ export default function Contact() {
           </form>
         </div>
         <div className="tc">
-            <i>* Usually we contact you within 24 hours</i>
+            <i>* Usually we contact you in 24 hours</i>
         </div>
       </div>
     </div>

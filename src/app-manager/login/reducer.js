@@ -21,8 +21,8 @@ export default produce((draft, action) => {
       draft.token = "";
       draft.sessionRunning = false;
       break;
-    case "SET_SESSION_RUNNING":
-      draft.sessionRunning = true;
+    case "WRONG_CRED":
+      draft.wrongcred = true;
       break;
     default:
       return draft;
