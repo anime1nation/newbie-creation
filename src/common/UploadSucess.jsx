@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './feedback.css';
 
 export default function UploadSucess(){
@@ -8,9 +7,7 @@ export default function UploadSucess(){
         <p className='feedback-content'>
             Sucessfully uploaded 
         </p>
-        {/*
         <button className='button' onClick={() => window.location.reload(false)}>Upload More</button>
-        {/* </Link> */}
         <div className='line'></div>
       </div>
     )

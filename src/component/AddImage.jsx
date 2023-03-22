@@ -36,7 +36,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateDetail.append("discription ",name );
+    updateDetail.append("discription",name );
     updateDetail.append("file", fileName);
     setSending(true);
     axios
