@@ -1,50 +1,80 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./landing.css";
 import bg from "../assets/bg.jpg";
 import b1 from "../assets/b1.jpg";
 import axios from "axios";
+import Loader from "../common/Loader";
+import heart1 from "../assets/heart1.svg";
+import heart2 from "../assets/heart2.svg";
 
 const Landing = () => {
   const [files, setFiles] = useState([]);
+  const [heart, setHeart] = useState(true);
 
-  const apiURL = "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/getAlbum";
+  const apiURL =
+    "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/getAlbum";
 
-  // axios.get(apiURL,{
-  //       params: {
-  //         folder: 'cardImage/',
-  //       },
-  //     })
-  //   .then((response) => setFiles(response.data))
+  useEffect(() => {
+    const fetchImageUrl = async () => {
+      try {
+        const response = await axios.get(apiURL, {
+          params: {
+            folder: "cardImage/",
+          },
+        });
+        setFiles(response.data.image);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchImageUrl();
+  }, []);
   return (
     <>
       <div id="banner">
-        <div className="ban">
-          <img className="bannerimage" src={bg} alt="insta" />
-        </div>
-        <div className="banner-card">
-          <div className="lab">
-            <label className="label1"><p>The</p><p><span>un</span>Traditional</p><p>Photographer</p></label>
+        <div className="land">
+          <div className="ban">
+            <img className="bannerimage" src={bg} alt="insta" />
           </div>
-          <div className="cardi1">
-          <img className="cardimage" src={b1} alt="insta" />
-          </div>
-        </div>
-      </div>
-      <div className="album">
-      <div className="row">
-        {files.map((file) => (
-          <div className="col-md-4" key={file.Key}>
-            <div className="card mb-4 shadow-sm">
-              <img
-                className="card-img-top"
-                src={`https://newbiecreations.s3.amazonaws.com/${file.Key}`}
-                alt={file.Key}
-              />
+          <div className="banner-card">
+            <div className="lab">
+              <label className="label1">
+                <p>The</p>
+                <p>
+                  <span>un</span> Traditional
+                </p>
+                <p>Photographer</p>
+              </label>
+            </div>
+            <div className="cardi1">
+              <img className="cardimage" src={b1} alt="insta" />
             </div>
           </div>
-        ))}
+        </div>
+        <div className="card-container">
+          {files.map((file) => (
+            <div className="card" key={file}>
+              {file ? (
+                <img className=" card1" src={file} alt={file.Key} />
+              ) : (
+                <Loader />
+              )}
+              <div className="disc">
+                <div className="card-title">
+                  <label>Moni & rakesh</label>
+                </div>
+                <div className="card-description" onClick={() => setHeart(false)}>
+                  {heart ? (
+                    <img src={heart1} alt="s" />
+                  ) : (
+                    <img src={heart2} alt="s" />
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };
