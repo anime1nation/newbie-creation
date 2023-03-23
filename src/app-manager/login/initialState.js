@@ -1,6 +1,6 @@
 const initialState = {
     userName: "",
-    passkey: "",
+    passKey: "",
     token: "",
     sessionId: "",
     userType: "admin",

@@ -2,11 +2,13 @@ import React from "react";
 import { useAuth, useAuthDispatch } from "../app-manager/login/AuthProvider";
 import { useLoginData } from "../app-manager/login/login";
 import { AdminButton } from "../common/AdminButton";
+import AddImage from "../component/AddImage"
 import "./Login.css";
 
 
 export default function Login() {
   const auth = useAuth();
+  console.log(auth)
   const {userName,passKey} = auth;
   const dispatch = useAuthDispatch();
 
@@ -27,6 +29,9 @@ export default function Login() {
     e.preventDefault();
     login();
   };
+  if(auth.token){
+    return <AddImage/>
+  }
   return (
     <div id="login_page">
       <div className="login_container">
@@ -55,6 +60,11 @@ export default function Login() {
           </AdminButton>
         </form>
       </div>
+      
+      {auth.wrongcred && (
+        
+        <label>Wrong Password</label>
+      )}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import {useQuery} from "@tanstack/react-query";
 import axios from "axios";
-import FeedbackPage from "../../common/FeedbackPage";
+
 
 const login = async (userName,passKey) => {
     const data = await axios({
@@ -11,7 +11,7 @@ const login = async (userName,passKey) => {
             password: passKey,
           },
     });
-    console.log(data)
+    // console.log(data)
     return data;
 }
 
@@ -21,13 +21,12 @@ useQuery({
     queryFn:()=>login(userName,passKey,dispatch),
     retry: 0,
     onSucess:(data)=>{
-        dispatch({ type: "SET_TOKEN",payload: data.data.token});
-        dispatch({ type: "SET_SESSION",payload: data.data.token});
-        
+        dispatch({ type: "SET_TOKEN", payload: data.data.token });
+      dispatch({ type: "SET_SESSION", payload: data.data.sessionId });   
     },
     onError:(err)=>{
-        if(err.response.data === "session already running")
-        dispatch({type:"Wrong Cred"});
+        if(err.response.data === "unauthorized")
+        dispatch({type:"Wrong_Cred"});
     },
     enabled: false,
 });

@@ -7,45 +7,6 @@ import Loader from "../common/Loader";
 import heart1 from "../assets/heart1.svg";
 import heart2 from "../assets/heart2.svg";
 
-export function DiscriptionFile(){
-  const [heart, setHeart] = useState(true);
-  const [disc, setDisc] = useState([]);
-  const apiURL2 = "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/getFileDetail";
-  useEffect(() => {
-    const fetchImagedetail = async () => {
-      try {
-        const response = await axios.get(apiURL2);
-        setDisc(response.data.filedetail);
-        console.log(response.data.filedetail)
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchImagedetail();
-  }, []);
-
-  return(
-  <>
-    {disc.map((dis)=>(
-      <div className="disc">
-        <div className="card-title">
-          <label>{dis.discription}</label>
-        </div>
-        <div className="card-description" onClick={() => setHeart(false)}>
-          {heart ? (
-            <img src={heart1} alt="s" />
-          ) : (
-            <img src={heart2} alt="s" />
-          )}
-        </div>
-      </div>
-      ))}
-      </>
-  )
-}
-
-
-
 const Landing = () => {
   const [files, setFiles] = useState([]);
   const [heart, setHeart] = useState(true);
@@ -94,17 +55,16 @@ const Landing = () => {
           </div>
         </div>
         <div className="card-container">
-          
-          {files.map((file) => (
-            <div className="card" key={file}>
+          {files.map((file,index) => (
+            <div className="card" key={index}>
               {file ? (
-                <img className=" card1" src={file} alt={file.Key} />
+                <img className=" card1" src={file.url} alt="a" />
               ) : (
                 <Loader />
               )}
               <div className="disc">
         <div className="card-title">
-          <label>sdaas</label>
+          <label>{file.desc}</label>
         </div>
         <div className="card-description" onClick={() => setHeart(false)}>
           {heart ? (
