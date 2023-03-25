@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./landing.css";
-import bg from "../assets/bg.jpg";
+import bg from "../assets/gif1.gif";
 import b1 from "../assets/b1.jpg";
 import axios from "axios";
 import Loader from "../common/Loader";

@@ -13,6 +13,7 @@ import {
 } from "../app-manager/slices/feedbackSlice";
 import { useLocation } from "react-router-dom";
 import UploadSucess from "../common/UploadSucess";
+import ImgDetail from "./details/ImgDetail";
 // import PhoneInput from "react-phone-input-2";
 
 export default function Contact() {
@@ -68,6 +69,7 @@ export default function Contact() {
   }
 
   return (
+    <>
     <div id="upload" >
         <div className="cont">
           <form className="contactForm"  onSubmit={handleSubmit}>
@@ -119,7 +121,10 @@ export default function Contact() {
             <i>File uploaded here will be visible on landing page card </i>
         </div>
         </div>
-        
       </div>
+      <div>
+          <ImgDetail/>
+      </div>
+      </>
   );
 }
