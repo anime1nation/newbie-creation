@@ -16,7 +16,7 @@ const { message, sent, status } = useSelector((state) => state.feedback);
         <div>
             <p onClick={()=>navigate("/contact")}>Contact Us</p>
         </div>
-        <div>
+        <div className="lo">
         <img className="logo" src={logo} alt="logo"  onClick={()=>navigate("")} />
         </div>
         <div>

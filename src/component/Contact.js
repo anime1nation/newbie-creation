@@ -5,9 +5,9 @@ import {
   updatedName,
   updatedPhoneNumber,
 } from "../app-manager/slices/contactSlice";
-import call from "../assets/call.png";
-import insta from "../assets/instagram.png";
-import whatsapp from "../assets/whatsapp.png";
+import call from "../assets/call.svg";
+import insta from "../assets/instagram.svg";
+import whatsapp from "../assets/whatsapp.svg";
 import Loader from "../common/Loader";
 import FeedbackPage from "../common/FeedbackPage";
 import "./contact.css";

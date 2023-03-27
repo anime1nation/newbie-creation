@@ -6,10 +6,41 @@ import axios from "axios";
 import Loader from "../common/Loader";
 import heart1 from "../assets/heart1.svg";
 import heart2 from "../assets/heart2.svg";
+import cross from "../assets/cross.svg";
 
 const Landing = () => {
   const [files, setFiles] = useState([]);
-  const [heart, setHeart] = useState(true);
+  const [likes, setLikes] = useState(false);
+
+  const handleLike = (id) => {
+    setLikes((prevLiked) => ({
+      ...prevLiked,
+      [id]: true,
+    }));
+  };
+  
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const handleImageClick = (index) => {
+    setCurrentImageIndex(index);
+    setIsFullScreen(true);
+  };
+
+  const handleExitFullScreenClick = () => {
+    setIsFullScreen(false);
+  };
+
+  const handleNextClick = () => {
+    setCurrentImageIndex((currentImageIndex + 1) % files.length);
+  };
+
+  const handlePrevClick = () => {
+    setCurrentImageIndex(
+      (currentImageIndex - 1 + files.length) % files.length
+    );
+  };
 
   const apiURL =
     "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/getAlbum";
@@ -23,6 +54,7 @@ const Landing = () => {
           },
         });
         setFiles(response.data.image);
+        
       } catch (error) {
         console.log(error);
       }
@@ -54,11 +86,32 @@ const Landing = () => {
             </div>
           </div>
         </div>
+        <div>
+        {isFullScreen ? (
+        <div className="full-screen-overlay">
+          <img
+            className="full-screen-image"
+            src={files[currentImageIndex].url}
+            alt="Full screen"
+          />
+          <img src={cross}
+            className="exit-full-screen-button"
+            onClick={handleExitFullScreenClick}
+            alt="a"
+          />
+          <button className="carousel-button prev" onClick={handlePrevClick}>
+            &lt;
+          </button>
+          <button className="carousel-button next" onClick={handleNextClick}>
+            &gt;
+          </button>
+        </div>
+      ) : (
         <div className="card-container">
           {files.map((file,index) => (
             <div className="card" key={index}>
               {file ? (
-                <img className=" card1" src={file.url} alt="a" />
+                <img className=" card1" src={file.url} alt="a" onClick={() => handleImageClick(index)}/>
               ) : (
                 <Loader />
               )}
@@ -66,18 +119,21 @@ const Landing = () => {
         <div className="card-title">
           <label>{file.desc}</label>
         </div>
-        <div className="card-description" onClick={() => setHeart(false)}>
-          {heart ? (
-            <img src={heart1} alt="s" />
-          ) : (
+        <div className="card-description" onClick={() => handleLike(index)}>
+          {likes[index] ? (
             <img src={heart2} alt="s" />
+          ) : (
+            <img src={heart1} alt="s" />
           )}
         </div>
       </div>
             </div>
           ))}
         </div>
+        )}
+        </div>
       </div>
+
     </>
   );
 };

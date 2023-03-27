@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1em;
   padding-inline: 10em;
 }
 #footer .phone {
@@ -21,20 +22,30 @@
 }
 #footer .icon {
   display: flex;
-  gap: 6em;
+  gap: 2em;
 }
 #footer p {
-  font: normal normal normal 25px/30px ABeeZee;
+  font: normal normal normal 20px/25px ABeeZee;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
 }
+#footer .cr{
+  color: #ffff;
+}
+#footer .lo{
+  width: 150px;
+}
+#footer .flogo{
+  width: 90%;
+}
+
 @media (max-aspect-ratio: 1/1), (max-width: 900px) {
   #footer .itemf{
     flex-direction: column;
     padding-block:1em;
     padding-inline: 0.3em;
-    gap: 0em;
+    gap: 1em;
   }
   #footer .icon {
     gap: 1em;

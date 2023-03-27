@@ -1,8 +1,8 @@
 import React from "react";
 import "./footer.css";
-import call from "../assets/call.png";
-import insta from "../assets/instagram.png";
-import whatsapp from "../assets/whatsapp.png";
+import call from "../assets/call.svg";
+import insta from "../assets/instagram.svg";
+import whatsapp from "../assets/whatsapp.svg";
 import flogo from "../assets/flogo.png";
 
 const Footer = () => {
@@ -25,7 +25,10 @@ const Footer = () => {
           </div>
         </div>
         </div>
-        <div>
+        <label className="cr">
+        ©2023 NewBie Creations | All rights reserved
+        </label>
+        <div className="lo">
           <img className="flogo" src={flogo} alt="flogo" />
         </div>
       </div>

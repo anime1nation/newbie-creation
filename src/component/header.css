@@ -5,7 +5,12 @@
     z-index: 200;
     background-color:white;
   }
-  
+  #main-header .lo{
+   width: 175px;
+  }
+  #main-header .logo{
+    width: 90%;
+  }
   #main-header .header {
     background-color:#FFFFFF;
     display: flex;
@@ -17,7 +22,7 @@
   }
   #main-header p{
     text-align: left;
-    font: 20px/23px ABeeZee;
+    font: 15px/17px ABeeZee;
     letter-spacing: 0px;
     color: #707070;
     opacity: 1;
