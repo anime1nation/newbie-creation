@@ -1,11 +1,18 @@
 #upload{
     background-color: white;
-    margin-block: 5em;
+    margin-block: 2em;
     margin-inline: auto;
     width:50%;
     padding-inline: 4em;
     padding-block: 1em;
     border-radius: 8em;
+  }
+  .logout{
+    padding-top: 1em;
+padding-left: 90%;
+  }
+  .logout p{
+    font-size: 20px;
   }
   #upload .cont{
       padding-block: 2em;
@@ -43,6 +50,12 @@
     font-size: 20px;
   }
   
+#upload .img-name {
+  /* align-self: flex-end; */
+  color: red;
+  /* font-size: 1em; */
+}
+
   #upload textarea:focus,#upload input:focus {
     outline: 0;
   }
@@ -212,5 +225,9 @@
       justify-content: center;
       filter: invert(100%);
       gap:1em;
+    }
+    .logout{
+      padding-top: .5em;
+  padding-left: 40%;
     }
   } 

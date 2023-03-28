@@ -18,6 +18,7 @@ const contactSlice = createSlice({
       state.name = "";
       state.phoneNumber = "";
       state.message = "";
+      state.file="";
     },
   },
 });

@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addFeedbackMessage, removeFeedbackMessage } from "../../app-manager/slices/feedbackSlice";
 import Loader from "../../common/Loader";
@@ -10,7 +10,6 @@ export default function ImgDetail() {
   const [sending, setSending] = useState(false);
   const apiURL =
     "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/getFileDetail";
-  useEffect(() => {
     const fetchDetail = async () => {
       try {
         const response = await axios.get(apiURL);
@@ -20,14 +19,14 @@ export default function ImgDetail() {
       }
     };
     fetchDetail();
-  }, []);
+  
 
   const dispatch = useDispatch();
   const apiURL2 =
     "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/deleteImage";
   const handleSubmit = (e) => {
     // e.preventDefault();
-    console.log(e);
+    // console.log(e);
     setSending(true);
     axios
       .delete(apiURL2, {
@@ -37,7 +36,7 @@ export default function ImgDetail() {
       })
       .then(() => {
         setSending(false);
-        window.location.reload(false)
+        
       })
       .catch((e) => {
         setSending(false);

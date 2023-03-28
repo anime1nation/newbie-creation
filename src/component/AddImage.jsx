@@ -12,8 +12,11 @@ import {
   removeFeedbackMessage,
 } from "../app-manager/slices/feedbackSlice";
 import { useLocation } from "react-router-dom";
-import UploadSucess from "../common/UploadSucess";
+// import UploadSucess from "../common/UploadSucess";
 import ImgDetail from "./details/ImgDetail";
+import Logout from "../admin/Logout";
+import { useAuth } from "../app-manager/login/AuthProvider";
+import Login from "../admin/Login";
 // import PhoneInput from "react-phone-input-2";
 
 export default function Contact() {
@@ -21,7 +24,7 @@ export default function Contact() {
   const path = location.pathname.split("/").join("");
 
   const [sending, setSending] = useState(false);
-  const [feedback, setFeedback] = useState();
+  const [feedback, setFeedback] = useState(false);
   const [fileName, setFilename] = useState("");
 
   function handleFile(e) {
@@ -29,7 +32,7 @@ export default function Contact() {
     setFilename(file);
   }
 
-  const { name } = useSelector((state) => state.contact);
+  const { name} = useSelector((state) => state.contact);
 
   const dispatch = useDispatch();
   const apiURL = "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/addImage";
@@ -64,12 +67,23 @@ export default function Contact() {
       });
     dispatch(removeFeedbackMessage());
   };
-  if (feedback) {
-    return <UploadSucess />;
-  }
+  
+  const auth = useAuth();
+  const {userName,sessionId} = auth;
+  // if (feedback) {
+  //   return <UploadSucess />;
+  // }
 
+  if(!sessionId){
+    return <Login/>
+  }
   return (
+    
     <>
+    <div className="logout">
+      <p >Hello {userName}</p>
+        <Logout/>
+      </div>
     <div id="upload" >
         <div className="cont">
           <form className="contactForm"  onSubmit={handleSubmit}>
@@ -88,6 +102,7 @@ export default function Contact() {
               <input
                 hidden
                 required
+                
                 autoComplete="off"
                 accept="image/x-png,image/gif,image/jpeg"
                 type="file"
@@ -101,7 +116,11 @@ export default function Contact() {
               {/* <span className="img-name">
                 {fileName?.name ? fileName?.name : "not selected"}
               </span> */}
-              
+               <span className="img-name">
+              {feedback ? (
+               "Image Uploaded . Upload More"):(""
+              )}
+              </span>
             <button
               type="submit"
               className="button"

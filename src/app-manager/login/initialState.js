@@ -4,7 +4,6 @@ const initialState = {
     token: "",
     sessionId: "",
     userType: "admin",
-    sessionRunning: false,
   };
   
   export default initialState;

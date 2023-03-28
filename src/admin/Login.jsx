@@ -8,7 +8,7 @@ import "./Login.css";
 
 export default function Login() {
   const auth = useAuth();
-  console.log(auth)
+  // console.log(auth)
   const {userName,passKey} = auth;
   const dispatch = useAuthDispatch();
 
