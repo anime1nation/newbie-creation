@@ -107,6 +107,7 @@ const Landing = () => {
           </button>
         </div>
       ) : (
+        <div className="galary">
         <div className="card-container">
           {files.map((file,index) => (
             <div className="card" key={index}>
@@ -129,6 +130,7 @@ const Landing = () => {
       </div>
             </div>
           ))}
+        </div>
         </div>
         )}
         </div>

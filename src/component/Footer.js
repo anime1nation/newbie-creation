@@ -11,14 +11,14 @@ const Footer = () => {
       <div className="itemf">
         <div className="icon">
         <div>
-          <img className="insta" src={insta} alt="insta" />
+          <a href="https://www.instagram.com/newbie_creations" target="_blank" rel="noreferrer"><img className="insta" src={insta} alt="insta" /></a>
         </div>
         <div>
-          <img className="whatsapp" src={whatsapp} alt="whatsapp" />
+        <a href="https://wa.me/+917061330904?text=Hello%20%F0%9F%93%B7%20,%20Just%20visited%20your%20website%20.I%20want%20to%20know%20more%20about%20you%20.%20kindly%20reply%20as%20soon%20." target="_blank" rel="noreferrer"><img className="whatsapp" src={whatsapp} alt="whatsapp" /></a>
         </div>
         <div className="phone">
           <div>
-            <img className="call" src={call} alt="call" />
+          <a href="tel:+917061330904"><img className="call" src={call} alt="call" /></a>
           </div>
           <div>
             <p>+91-7061330904</p>
