@@ -2,7 +2,8 @@ import React from "react";
 import { useAuth, useAuthDispatch } from "../app-manager/login/AuthProvider";
 import { useLoginData } from "../app-manager/login/login";
 import { AdminButton } from "../common/AdminButton";
-import AddImage from "../component/adminpage/addimage/AddImage"
+// import AddImage from "../component/adminpage/addimage/AddImage"
+import AdminMain from "../component/adminpage/adminmain/AdminMain";
 import "./Login.css";
 
 
@@ -30,7 +31,7 @@ export default function Login() {
     login();
   };
   if(auth.token){
-    return <AddImage/>
+    return <AdminMain/>
   }
   return (
     <div id="login_page">
