@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addFeedbackMessage, removeFeedbackMessage } from "../../app-manager/slices/feedbackSlice";
-import Loader from "../../common/Loader";
+import { addFeedbackMessage, removeFeedbackMessage } from "../../../app-manager/slices/feedbackSlice";
+import Loader from "../../../common/Loader";
 import "./imgdetail.css";
 
 export default function ImgDetail() {
@@ -12,7 +12,11 @@ export default function ImgDetail() {
     "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/getFileDetail";
     const fetchDetail = async () => {
       try {
-        const response = await axios.get(apiURL);
+        const response = await axios.get(apiURL,{
+          params: {
+            path:'getImage',
+          },
+        })
         setDetail(response.data.filedetail);
       } catch (error) {
         console.log(error);

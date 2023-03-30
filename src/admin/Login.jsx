@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth, useAuthDispatch } from "../app-manager/login/AuthProvider";
 import { useLoginData } from "../app-manager/login/login";
 import { AdminButton } from "../common/AdminButton";
-import AddImage from "../component/AddImage"
+import AddImage from "../component/adminpage/addimage/AddImage"
 import "./Login.css";
 
 

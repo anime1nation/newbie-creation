@@ -5,7 +5,9 @@
     width:50%;
     padding-inline: 4em;
     padding-block: 1em;
-    border-radius: 8em;
+    border-radius: 1em;
+    border: 2px solid #707070;
+    box-shadow: 0px 6px 12px #00000029;
   }
   .logout{
     padding-top: 1em;

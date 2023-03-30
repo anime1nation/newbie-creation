@@ -70,26 +70,26 @@ export default function Contact() {
     <div id="contact" >
       <div className="cont">
         <div>
-          <p>Contact Us Via</p>
+          <p className="p">Contact Us Via</p>
         </div>
         <div className="icon">
           <div className="insta">
-            <img  src={insta} alt="insta" />
+          <a href="https://www.instagram.com/newbie_creations" target="_blank" rel="noreferrer"><img className="insta" src={insta} alt="insta" /></a>
           </div>
           <div className="whatsapp">
-            <img  src={whatsapp} alt="whatsapp" />
+          <a href="https://wa.me/+917061330904?text=Hello%20%F0%9F%93%B7%20,%20Just%20visited%20your%20website%20.I%20want%20to%20know%20more%20about%20you%20.%20kindly%20reply%20as%20soon%20." target="_blank" rel="noreferrer"><img className="whatsapp" src={whatsapp} alt="whatsapp" /></a>
           </div>
           <div className="phone">
             <div className="call">
-              <img  src={call} alt="call" />
+            <a href="tel:+917061330904"><img className="call" src={call} alt="call" /></a>
             </div>
             <div>
-              <p>+91-7061330904</p>
+              <p className="p">+91-7061330904</p>
             </div>
           </div>
         </div>
         <div>
-          <p>OR</p>
+          <p className="p">OR</p>
         </div>
         <div>
           <form className="contactForm" onSubmit={handleSubmit}>

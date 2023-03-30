@@ -1,11 +1,13 @@
 #contact{
-  background-color: white;
-  margin-block: 5em;
+  margin-block: 10em;
   margin-inline: auto;
-  width:50%;
+  width:40%;
   padding-inline: 4em;
   padding-block: 1em;
-  border-radius: 8em;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 34px;
+  opacity: 1
 }
 #contact .cont{
     padding-block: 2em;
@@ -15,8 +17,12 @@
     align-items: center;
     gap: 2em;
 }
-#contact .cont p{
-    font-size: 2em;
+#contact .p{
+  text-align: center;
+  font: normal normal normal 25px/30px ABeeZee;
+  letter-spacing: 0px;
+  color: #4C4C4C;
+    opacity: 1;
 }
 #contact .icon {
     display: flex;
@@ -34,24 +40,17 @@
     gap: 1em;
   }
 
-  #contact html {
-    font-family: 'Lora', sans-serif;
-    width: 100%;
-  }
   
-  #contact body {
-    margin: 5% auto 0 auto;
-    width: 90%;
-    max-width: 1125px;
-   
-  }
   #contact input,#contact span,#contact label,#contact textarea ,#contact .question1{
-  font-family: 'Ubuntu', sans-serif;
   display: block;
   margin: 10px;
   padding: 5px;
   border: none;
   font-size: 20px;
+  font: normal normal normal 15px/18px ABeeZee;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
 }
 
 #contact textarea:focus,#contact input:focus {
@@ -163,7 +162,11 @@
 }
 
 #contact .tc{
-  font-size: 20px;
+  text-align: center;
+font: italic normal normal 20px/23px ABeeZee;
+letter-spacing: 0px;
+color: #4C4C4C;
+opacity: 1;
 }
 
 @-webkit-keyframes appear {
@@ -214,7 +217,7 @@
     grid-area: whatsapp;
   }
   .phone{
-    grid-area: phine;
+    grid-area: phone;
   }
   #contact .icon {
     display: flex;

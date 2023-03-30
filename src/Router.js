@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./admin/Login";
 import Contact from "./component/Contact";
 import Landing from "./component/Landing";
-import AddImage from "./component/AddImage";
+import AddImage from "./component/adminpage/addimage/AddImage";
 
 export default function Routers() {
   return (

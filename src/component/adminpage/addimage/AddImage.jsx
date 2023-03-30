@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import {
   resetForm,
   updatedName
-} from "../app-manager/slices/contactSlice";
-import Loader from "../common/Loader";
-import "./addimage.css";
+} from "../../../app-manager/slices/contactSlice";
+import Loader from "../../../common/Loader";
+import './addimage.css';
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addFeedbackMessage,
   removeFeedbackMessage,
-} from "../app-manager/slices/feedbackSlice";
+} from "../../../app-manager/slices/feedbackSlice";
 import { useLocation } from "react-router-dom";
 // import UploadSucess from "../common/UploadSucess";
-import ImgDetail from "./details/ImgDetail";
-import Logout from "../admin/Logout";
-import { useAuth } from "../app-manager/login/AuthProvider";
-import Login from "../admin/Login";
+import ImgDetail from "../details/ImgDetail";
+import Logout from "../../../admin/Logout";
+import { useAuth } from "../../../app-manager/login/AuthProvider";
+import Login from "../../../admin/Login";
 // import PhoneInput from "react-phone-input-2";
 
 export default function Contact() {
