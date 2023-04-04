@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addFeedbackMessage, removeFeedbackMessage } from "../../../app-manager/slices/feedbackSlice";
 import Loader from "../../../common/Loader";
@@ -10,6 +10,7 @@ export default function ImgDetail() {
   const [sending, setSending] = useState(false);
   const apiURL =
     "https://ez2g76nft3.execute-api.ap-south-1.amazonaws.com/biecreation/getFileDetail";
+   useEffect(()=>{
     const fetchDetail = async () => {
       try {
         const response = await axios.get(apiURL,{
@@ -23,6 +24,7 @@ export default function ImgDetail() {
       }
     };
     fetchDetail();
+  },[sending]);
   
 
   const dispatch = useDispatch();
@@ -40,7 +42,6 @@ export default function ImgDetail() {
       })
       .then(() => {
         setSending(false);
-        
       })
       .catch((e) => {
         setSending(false);

@@ -5,7 +5,7 @@
 .sidebar{
     background-color: rgb(235, 242, 140);
     /* width: 20%; */
-    /* height: 100vh; */
+    min-height: 100vh;
     flex: 1;
     top: 0;
     bottom: 0;

@@ -35,9 +35,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    contactDetail.append("name ", name);
-    contactDetail.append("phoneNumber ", phoneNumber);
-    contactDetail.append("message ", message);
+    contactDetail.append("name", name);
+    contactDetail.append("phoneNumber", phoneNumber);
+    contactDetail.append("message", message);
     setSending(true);
     axios
       .post(apiURL, contactDetail, {

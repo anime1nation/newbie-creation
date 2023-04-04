@@ -1,0 +1,41 @@
+#condetail{
+    width: 50%;
+    margin: auto;
+
+    background-color: antiquewhite;
+}
+#condetail .data{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    /* margin-top: 5%; */
+    margin-block: 5%;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+#condetail .head{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    border: 1px solid black;
+    /* align-items: center; */
+}
+
+#condetail .body{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    border: 1px solid black;
+    padding: 4px;
+    /* align-items: center; */
+}
+#condetail .body> div{
+    flex: 1;
+}
+#condetail .head div p,#condetail .body div{
+font-size: 25px;
+}

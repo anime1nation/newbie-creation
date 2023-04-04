@@ -13,7 +13,7 @@ import {
 } from "../../../app-manager/slices/feedbackSlice";
 import { useLocation } from "react-router-dom";
 // import UploadSucess from "../common/UploadSucess";
-import ImgDetail from "../details/ImgDetail";
+// import ImgDetail from "../details/ImgDetail";
 import Logout from "../../../admin/Logout";
 import { useAuth } from "../../../app-manager/login/AuthProvider";
 import Login from "../../../admin/Login";
@@ -140,10 +140,7 @@ export default function Contact() {
             <i>File uploaded here will be visible on landing page card </i>
         </div>
         </div>
-      </div>
-      <div>
-          <ImgDetail/>
-      </div>
+      </div>  
       </>
   );
 }
