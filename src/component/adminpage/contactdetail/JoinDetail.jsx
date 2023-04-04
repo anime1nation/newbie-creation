@@ -36,7 +36,7 @@ export default function ContactDetail() {
                         Phone Number
                     </div>
                 </div>
-                {contact.length > 0  && contact.filter((x)=>x.actionFrom === 'contact').map((cont, index) => (
+                {contact.length > 0  && contact.filter((x)=>x.actionFrom === 'join').map((cont, index) => (
                     <div key={index} className="body">
                         <div>{cont.name}</div>
                         <div>{cont.message}</div>

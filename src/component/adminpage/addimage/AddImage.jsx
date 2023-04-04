@@ -69,7 +69,7 @@ export default function Contact() {
   };
   
   const auth = useAuth();
-  const {userName,sessionId} = auth;
+  const {sessionId} = auth;
   // if (feedback) {
   //   return <UploadSucess />;
   // }
@@ -80,10 +80,10 @@ export default function Contact() {
   return (
     
     <>
-    <div className="logout">
+    {/* <div className="logout">
       <p >Hello {userName}</p>
         <Logout/>
-      </div>
+      </div> */}
     <div id="upload" >
         <div className="cont">
           <form className="contactForm"  onSubmit={handleSubmit}>
