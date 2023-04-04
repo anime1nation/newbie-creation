@@ -14,7 +14,7 @@ import {
 import { useLocation } from "react-router-dom";
 // import UploadSucess from "../common/UploadSucess";
 // import ImgDetail from "../details/ImgDetail";
-import Logout from "../../../admin/Logout";
+// import Logout from "../../../admin/Logout";
 import { useAuth } from "../../../app-manager/login/AuthProvider";
 import Login from "../../../admin/Login";
 // import PhoneInput from "react-phone-input-2";

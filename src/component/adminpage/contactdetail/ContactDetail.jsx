@@ -24,6 +24,7 @@ export default function ContactDetail() {
     }, []);
     return (
         <div id='condetail'>
+            <h3>Contact Database</h3>
             <div className="data">
                 <div className="head">
                     <div>
