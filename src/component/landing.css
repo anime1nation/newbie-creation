@@ -2,18 +2,18 @@
   width: 100%;
   padding: auto;
   margin: auto;
-  padding-block: 5em;
+
 }
 
 #banner .land {
   display: flex;
   gap: 2em;
-  width: 90%;
+  width: 100%;
   justify-content: center;
-  align-items: self;
   margin: 0 auto;
   flex-wrap: wrap;
   padding-bottom: 3em;
+  padding-top: 3em;
 }
 #banner .lab {
   text-align: center;

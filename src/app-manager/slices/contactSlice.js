@@ -19,6 +19,8 @@ const contactSlice = createSlice({
       state.phoneNumber = "";
       state.message = "";
       state.file="";
+      state.video1="";
+      state.video2="";
     },
   },
 });

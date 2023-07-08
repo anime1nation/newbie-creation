@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./landing.css";
-import bg from "../assets/gif1.gif";
+// import bg from "../assets/gif1.gif";
 import b1 from "../assets/b1.jpg";
 import axios from "axios";
 import Loader from "../common/Loader";
 import heart1 from "../assets/heart1.svg";
 import heart2 from "../assets/heart2.svg";
 import cross from "../assets/cross.svg";
+import VideoCarousel from "./video/VideoCarousel"
 
 const Landing = () => {
   const [files, setFiles] = useState([]);
@@ -68,8 +69,9 @@ const Landing = () => {
     <>
       <div id="banner">
         <div className="land">
-          <div className="ban">
-            <img className="bannerimage" src={bg} alt="insta" />
+          <div className="bannerimage">
+            {/* <img className="bannerimage" src={bg} alt="insta" /> */}
+            <VideoCarousel/>
           </div>
           <div className="banner-card">
             <div className="lab">
@@ -112,7 +114,7 @@ const Landing = () => {
           {files.map((file,index) => (
             <div className="card" key={index}>
               {file ? (
-                <img className=" card1" src={file.url} alt="a" onClick={() => handleImageClick(index)}/>
+                <img className="card1" src={file.url} alt="a" onClick={() => handleImageClick(index)}/>
               ) : (
                 <Loader />
               )}

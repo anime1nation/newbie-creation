@@ -2,6 +2,8 @@ export const initialState={
 name:"",
 phoneNumber:"",
 message:"",
-file:""
+file:"",
+video1:"",
+video2:"",
 };
 

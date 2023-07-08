@@ -19,7 +19,7 @@ import { useAuth } from "../../../app-manager/login/AuthProvider";
 import Login from "../../../admin/Login";
 // import PhoneInput from "react-phone-input-2";
 
-export default function Contact() {
+export default function AddImage() {
   const location = useLocation();
   const path = location.pathname.split("/").join("");
 

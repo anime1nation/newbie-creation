@@ -1,0 +1,235 @@
+#uploadVIdeo{
+    background-color: white;
+    margin-block: 2em;
+    margin-inline: auto;
+    width:50%;
+    padding-inline: 4em;
+    padding-block: 1em;
+    border-radius: 1em;
+    border: 2px solid #707070;
+    box-shadow: 0px 6px 12px #00000029;
+  }
+  #uploadVIdeo .logout{
+    padding-top: 1em;
+    padding-left: 90%;
+  }
+  #uploadVIdeo .logout p{
+    font-size: 20px;
+  }
+  #uploadVIdeo .cont{
+      padding-block: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 2em;
+  }
+  #uploadVIdeo .contactForm{
+      padding-block: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      /* align-items: center; */
+      gap: 2em;
+  }
+    #uploadVIdeo html {
+      font-family: 'Lora', sans-serif;
+      width: 100%;
+    }
+    
+    #uploadVIdeo body {
+      margin: 5% auto 0 auto;
+      width: 90%;
+      max-width: 1125px;
+     
+    }
+    #uploadVIdeo input,#uploadVIdeo span,#uploadVIdeo label,#uploadVIdeo textarea{
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+  }
+  
+#uploadVIdeo .img-name {
+  /* align-self: flex-end; */
+  color: red;
+  /* font-size: 1em; */
+}
+
+  #uploadVIdeo textarea:focus,#uploadVIdeo input:focus {
+    outline: 0;
+  }
+  /* Question */
+  
+  #uploadVIdeo input.question{
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    width: 80%;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+  }
+  /* Underline and Placeholder */
+  
+  #uploadVIdeo input.question + label{
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5em;
+    margin: 0;
+    width: 10%;
+    border-top: 1px solid red;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+  }
+  
+  #uploadVIdeo input.question:focus + label{
+    width: 80%;
+  }
+  
+  #uploadVIdeo input.question:focus,#uploadVIdeo input.question:valid{
+    padding-top: 35px;
+  }
+  
+  #uploadVIdeo .question:focus + label > .img, #uploadVIdeo .question:valid + label > .img {
+    top: -120px;
+    font-size: 18px;
+    color: #333;
+  }
+  #uploadVIdeo input.question:focus + label > .dis,#uploadVIdeo input.question:valid + label > .dis {
+    top: -90px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  #uploadVIdeo input.question:valid + label,#uploadVIdeo textarea.question:valid + label,#uploadVIdeo .question1:valid + label {
+    border-color: green;
+  }
+  
+  #uploadVIdeo input.question:invalid,#uploadVIdeo textarea.question:invalid,#uploadVIdeo .question1:invalid {
+    box-shadow: none;
+  }
+  #uploadVIdeo input.question + label >.img{
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8F8F8F;
+    font-size: 20px;
+    top: -100px;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+  #uploadVIdeo input.question + label > .dis{
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8F8F8F;
+    font-size: 20px;
+    top: -60px;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+  
+  #uploadVIdeo input[type="submit"] {
+    -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    display: block;
+    opacity: 0;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* #uploadVIdeo input[type="submit"]:hover {
+    background: #EEE;
+  }
+  
+  #uploadVIdeo input[type="submit"]:active {
+    background: #999;
+  } */
+  
+  #uploadVIdeo input.question:valid ~ .button,#uploadVIdeo textarea.question:valid ~ .button,#uploadVIdeo .question1:valid ~ .button {
+    -webkit-animation: appear 1s forwards;
+    animation: appear 1s forwards;
+  }
+  
+  #uploadVIdeo input.question:invalid ~ .button,#uploadVIdeo textarea.question:invalid ~ .button,#uploadVIdeo .question1:invalid ~ .button  {
+    display: none;
+  }
+  
+  #uploadVIdeo .tc{
+    font-size: 24px;
+  }
+  
+  @-webkit-keyframes appear {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes appear {
+    100% {
+      opacity: 1;
+    }
+  }
+  #uploadVIdeo .button{
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+  }
+  
+  #uploadVIdeo .button:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  
+  @media (max-aspect-ratio: 1/1), (max-width: 900px) {
+    #uploadVIdeo{
+      width:90%;
+      padding-inline: 3em;
+    }
+    .insta{
+      grid-area: insta;
+    }
+    .whatsapp{
+      grid-area: whatsapp;
+    }
+    .phone{
+      grid-area: phine;
+    }
+    #uploadVIdeo .icon {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      filter: invert(100%);
+      gap:1em;
+    }
+    .logout{
+      padding-top: .5em;
+  padding-left: 40%;
+    }
+  } 
