@@ -9,6 +9,12 @@ import heart2 from "../assets/heart2.svg";
 import cross from "../assets/cross.svg";
 import VideoCarousel from "./video/VideoCarousel"
 
+import 'swiper/css';
+import 'swiper/css/effect-creative';
+
+import { EffectCreative } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 const Landing = () => {
   const [files, setFiles] = useState([]);
   const [likes, setLikes] = useState(false);
@@ -91,12 +97,31 @@ const Landing = () => {
         <div>
         {isFullScreen ? (
         <div className="full-screen-overlay">
+          <Swiper
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+
           <img
             className="full-screen-image"
             src={files[currentImageIndex].url}
             alt="Full screen"
           />
-          <img src={cross}
+        </SwiperSlide>
+      </Swiper>
+          {/* <img src={cross}
             className="exit-full-screen-button"
             onClick={handleExitFullScreenClick}
             alt="a"
@@ -106,7 +131,7 @@ const Landing = () => {
           </button>
           <button className="carousel-button next" onClick={handleNextClick}>
             &gt;
-          </button>
+          </button> */}
         </div>
       ) : (
         <div className="galary">

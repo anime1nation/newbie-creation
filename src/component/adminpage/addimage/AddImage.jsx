@@ -29,6 +29,7 @@ export default function AddImage() {
 
   function handleFile(e) {
     let file = e.target.files[0];
+    console.log(file)
     setFilename(file);
   }
 

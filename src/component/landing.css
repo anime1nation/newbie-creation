@@ -222,4 +222,17 @@ width: 1.5em;
 }
 
 
+.swiper {
+  margin: 100px auto;
+  width: 320px;
+  height: 240px;
+}
 
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}

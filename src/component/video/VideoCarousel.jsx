@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import cross from "../../assets/cross.svg";
@@ -73,8 +73,15 @@ export default function VideoCarousel() {
     };
     fetchVideoUrl();
   }, []);
+const videoRef = useRef();
+const [pl,setpl] = useState(false)
+  const handleReady=()=>{
+    console.log("first video")
+    console.log(videoRef.current)
+    setpl(true)
+  }
 
-
+  
   return (
   <div id='video'>
         {isFullScreen ? (
@@ -101,7 +108,12 @@ export default function VideoCarousel() {
     >
       {videos.map((x, index) => (
         <div key={index} className="video-carousel-item" >
-          <ReactPlayer url={x.url} controls width="100%" height="auto" onClick={() => handleImageClick(index)}/>
+          <video autoPlay width="100%" height="auto" onClick={() => handleImageClick(index)} controls>
+            <source src={x.url}/>
+          </video>
+            
+          
+          {/* <ReactPlayer ref={videoRef} onReady={handleReady} playing={pl} url={x.url} controls width="100%" height="auto" onClick={() => handleImageClick(index)}/> */}
         </div>
       ))}
     </Carousel>
